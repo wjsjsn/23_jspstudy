@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	fieldset {
+		width: 300px;
+	}
+</style>
+</head>
+<body>
+	<div id="mydiv">
+	<form action="01_servlet/Ex07" method="get">
+	<fieldset>
+	<legend>계산기</legend>
+		<p><label for="su1">수 1 : </label>
+		<input type="number" name="su1" id="su1" required></p>
+		<p><label for="su2">수 2 : </label>
+		<input type="number" name="su2" id="su2" required></p>
+		<p>
+        <label>연산자 : </label>
+		<input type="radio" name="op" value="+">
+		<input type="radio" name="op" value="-">
+		<input type="radio" name="op" value="*">
+		<input type="radio" name="op" value="/">
+		</p>
+		<input type="submit" value="결과보기">
+		</fieldset>
+		</form>
+		</div>
+		<hr>
+	
+</body>
+</html>

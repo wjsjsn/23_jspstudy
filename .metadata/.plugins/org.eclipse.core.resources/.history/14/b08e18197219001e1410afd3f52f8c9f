@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSP 설명</title>
+</head>
+<body>
+<!-- html 주석 : 소스 보기에서 보임 -->
+<%-- jsp 주석 : 소스 보기에서 보이지 x --%>
+<%-- 
+JSP : Java Server Page
+      HTML 안에서 자바 코드를 사용할 수 있도록 만든 스크립트 언어(행 단위 번역 실행)
+      
+JSP 구성
+1. 지시어(디렉티브) : <%@ 지시어 %>
+                 => <@ page %>, <@ include %>,<@ taglib %>
+                 
+2. 스크립트 요소 : HTML 안에서 실제 자바 코드를 사용할 수 있도록 만드는 요소
+              1) 선언부 : <%! 내용 %>, 변수 선언이나 메서드 선언할 때 사용
+              2) 스크립트릿 : <% 자바코드 %>, 자바 코드를 코딩할 때 사용
+              3) 표현식 : <%=  %>, 변수값이나 메서드의 결과 등 저장돼 있는 결과값 출력
+
+ --%>
+ 
+</body>
+</html>

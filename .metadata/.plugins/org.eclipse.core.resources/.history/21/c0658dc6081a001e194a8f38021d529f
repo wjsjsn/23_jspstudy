@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%-- 
+ 스크립트 요소 : HTML 안에서 실제 자바 코드를 사용할 수 있도록 만드는 요소
+              1) 선언부 : <%! 내용 %>, 변수 선언이나 메서드 선언할 때 사용
+              2) 스크립트릿 : <% 자바코드 %>, 자바 코드를 코딩할 때 사용
+              3) 표현식 : <%=  %>, 변수값이나 메서드의 결과 등 저장돼 있는 결과값 출력
+              ** 현재는 표현식 대신 표현 언어(EL과 JSTL 사용)
+              
+              ** 주의사항 : 선언부, 스크립트릿, 표현식을 포함해서(겹쳐서) 사용할 수 없음
+--%>
+	<h2>0~10까지 자바의 for문을 사용해서 출력</h2>
+	<h3>
+		<%for(int i = 0; i < 11; i++){ %>
+			<%= i %>	
+		<%} %>	
+		</h3>
+		<hr>
+		<h2>0~10까지 자바의 for문을 사용해서 출력</h2>
+</body>
+</html>

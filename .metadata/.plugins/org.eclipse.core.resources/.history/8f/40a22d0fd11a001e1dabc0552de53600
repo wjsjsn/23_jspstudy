@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>로그인 결과 페이지</h2>
+	<%
+	// request.getAttribute이 나올 때는 Object로 나오므로 형변환해아함
+		int result = (int)request.getAttribute("logInChk");
+	
+	if(result == 1){
+		out.println("<h2>로그인 성공</h2>");
+	}else if(result == 0){%>
+		<!-- out.println("<h2>로그인 실패</h2>");		 -->
+<% } %>	
+</body>
+</html>

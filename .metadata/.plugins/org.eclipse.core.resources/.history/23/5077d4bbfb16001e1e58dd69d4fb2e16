@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>계산기</p>
+		<p><label>수 1 : </label><input type="number" name="su1" id="su1" required></p>
+		<p><label>수 2 : </label><input type="number" name="su2" id="su2" required></p>
+		<ul type="radio">
+        <label>연산자 : </label>
+		<p><input type="radio"> + 
+		<input type="radio"> - 
+		<input type="radio"> * 
+		<input type="radio"> / </p>
+		
+				
+		</ul>
+</body>
+</html>
