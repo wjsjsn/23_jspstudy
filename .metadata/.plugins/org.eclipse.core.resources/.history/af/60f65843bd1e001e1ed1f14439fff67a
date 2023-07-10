@@ -1,0 +1,14 @@
+package com.guestbook2.model;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.jsp.model.Command;
+
+public class ListCommand implements Command {
+	@Override
+	public String exec(HttpServletRequest request, HttpServletResponse response) {
+			
+		return "guestbook2/list.jsp";
+	}
+}

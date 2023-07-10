@@ -26,8 +26,6 @@ div {
 	width: 600px; 
 	text-align : center;
 	margin: auto;
-	text-align: center;
-}
 </style>
 </head>
 <body>

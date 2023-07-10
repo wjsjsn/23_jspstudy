@@ -1,0 +1,5 @@
+package com.guestbook2.db;
+
+public class DAO {
+
+}

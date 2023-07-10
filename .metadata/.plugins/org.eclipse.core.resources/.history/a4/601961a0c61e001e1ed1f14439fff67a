@@ -1,0 +1,12 @@
+package com.guestbook2.model;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class WriteOkCommand implements Command{
+	@Override
+	public String exec(HttpServletRequest request, HttpServletResponse response) {
+	System.out.println("WriteOkCommand");
+		return "";
+	}
+}

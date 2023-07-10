@@ -1,0 +1,8 @@
+package com.fileup.model;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class UpDownCommand {
+	public String exec(HttpServletRequest request, HttpServletResponse response);return"";
+}}

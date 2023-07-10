@@ -1,0 +1,10 @@
+package com.guestbook2.model;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class Command {
+	public String exec(HttpServletRequest request, HttpServletResponse response) {
+		return null;
+	}
+}

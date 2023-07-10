@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>방 명 록</title>
 <script type="text/javascript">
 	/* function list_go() {
 		location.href="/02_jsp/GuestController?cmd=list";

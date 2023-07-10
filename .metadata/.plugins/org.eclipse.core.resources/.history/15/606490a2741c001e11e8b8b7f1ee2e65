@@ -1,0 +1,12 @@
+package com.fileup.model;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class UpDownCommand {
+	public String exec(HttpServletRequest request, HttpServletResponse response);
+	// 실제 파일 업로드 부분
+	
+	return "fileUpDown/result.jsp";
+	}
+}
