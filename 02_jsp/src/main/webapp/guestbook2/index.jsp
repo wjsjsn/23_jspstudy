@@ -11,7 +11,7 @@
 	} */
 </script>
 </head>
-<body>
+<body> 
 
 <!-- <button onclick	="list_go()">리스트</button> -->
 
