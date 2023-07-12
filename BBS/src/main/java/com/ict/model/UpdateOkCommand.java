@@ -8,36 +8,31 @@ import com.ict.db.DAO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
-public class WriteOkCommand implements Command {
+public class UpdateOkCommand implements Command {
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		// 파일 업로드를 포함할 수도 있음
 		try {
 			String path = request.getServletContext().getRealPath("upload");
 			MultipartRequest mr = new MultipartRequest(request, path, 100 * 1024 * 1024, "utf-8",
 					new DefaultFileRenamePolicy());
 
 			BVO bvo = new BVO();
+			bvo.setB_idx(mr.getParameter("b_idx"));
 			bvo.setSubject(mr.getParameter("subject"));
 			bvo.setWriter(mr.getParameter("writer"));
 			bvo.setContent(mr.getParameter("content"));
-			bvo.setPwd(mr.getParameter("pwd"));
 
-			// 첨부파일 처리
-			if (mr.getFile("f_name") != null) {
+			String old_f_name = mr.getParameter("old_f_name");
+			
+			// 첨부파일이 없으면 이전 파일로 대체
+			if(mr.getFile("f_name") == null) {
+				bvo.setF_name(old_f_name);
+			}else {
 				bvo.setF_name(mr.getFilesystemName("f_name"));
-			} else {
-				bvo.setF_name("");
 			}
-
-			int result = DAO.getInsert(bvo);
-			if (result > 0) {
-				return "MyController?cmd=list";
-			} else {
-				return "MyController?cmd=write";
-			}
+			int result = DAO.getUpdate(bvo);
+			return "MyController?cmd=onelist&b_idx=" + bvo.getB_idx();
 		} catch (Exception e) {
-			e.printStackTrace();
 		}
 		return null;
 	}

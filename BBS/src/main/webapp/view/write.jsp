@@ -46,7 +46,7 @@
 <script type="text/javascript">
 	function sendData(f) {
 		// 유효성 검사
-		/*
+		
 		for (var i = 0; i < f.elements.length; i++) {
 			if(f.elements[i].value == ""){
 				if(i == 3) continue;
@@ -55,8 +55,28 @@
 				return;
 			}
 		}
-		*/
+		
 		// 다른 방법
+		/* if(f.subject.value.trim().length <= 0){
+			alert("제목을 입력하세요");
+			f.subject.value.focus();
+			return;
+		}
+		if(f.write.value.trim().length <= 0){
+			alert("작성자를 입력하세요");
+			f.write.value.focus();
+			return;
+		}
+		if(f.content.value.trim().length <= 0){
+			alert("내용을 입력하세요");
+			f.content.value.focus();
+			return;
+		}
+		if(f.pwd.value.trim().length <= 0){
+			alert("비밀번호를 입력하세요");
+			f.pwd.value.focus();
+			return;
+		} */
 		
 		f.action = "/MyController?cmd=write_ok";
 		f.submit();
@@ -97,9 +117,9 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<input style="background-color: lightyellow" type="button" value="보내기" onclick="sendData(this.form)"/>
-						<input style="background-color: lightyellow"  type="reset" value="다시"/>
-						<input style="background-color: lightyellow"  type="button" value="목록" onclick="list_go(this.form)"/>
+						<input style="background-color: lightyellow"  type="button" value="보내기" onclick="sendData(this.form)">
+						<input style="background-color: lightyellow"  type="reset" value="다시">
+						<input style="background-color: lightyellow"  type="button" value="목록" onclick="list_go(this.form)">
 					</td>
 				</tr>
 			</tbody>

@@ -105,7 +105,7 @@ table tfoot ol.paging li a:hover {
 						<c:forEach var="k" items="${list}" varStatus="vs">
 							<tr>
 								<td>${vs.count}</td>
-								<td>${k.subject}</td>
+								<td><a href="/MyController?cmd=onelist&b_idx=${k.b_idx}">${k.subject}</a></td>
 								<td>${k.writer}</td>
 								<td>${k.write_date.substring(0, 10)}</td>
 								<td>${k.hit}</td>

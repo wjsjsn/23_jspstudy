@@ -1,5 +1,0 @@
-package com.jsp.model;
-
-public interface Command {
-
-}

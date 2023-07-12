@@ -23,4 +23,38 @@ public class DAO {
 		List<BVO> list = getSession().selectList("bbs.list");
 		return list;
 	}
+	
+	// 원글 삽입
+	public static int getInsert(BVO bvo) {
+		int result = getSession().insert("bbs.insert", bvo);
+		ss.commit();
+		return result;
+	}
+	
+	// 원글 조회수
+	public static int getHit(String b_idx) {
+		int result = getSession().update("bbs.hit", b_idx);
+		ss.commit();
+		return result;
+	}
+	
+	// 원글 상세보기
+	public static BVO getOneList(String b_idx) {
+		BVO bvo = getSession().selectOne("bbs.onelist", b_idx);
+		return bvo;
+	}
+	
+	// 원글 수정
+	public static int getUpdate(BVO bvo) {
+		int result = getSession().update("bbs.update", bvo);
+		ss.commit();
+		return result;
+	}
+	
+	// 원글 삭제
+	public static int getDelete(String b_idx) {
+		int result = getSession().delete("bbs.delete", b_idx);
+		ss.commit();
+		return result;
+	}
 }
