@@ -78,7 +78,7 @@
 	}
 
 	function list_go(f) {
-		f.action = "/MyController?cmd=list";
+		f.action = "/MyController?cmd=list&cPage=${cPage}";
 		f.submit();
 	}
 </script>
@@ -122,8 +122,9 @@
 						<td><input type="password" name="pwd" size="12" /></td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="hidden" name="b_idx"
-							value="${bvo.b_idx}"> <input
+						<td colspan="2"><input type="hidden" name="b_idx"value="${bvo.b_idx}"> 
+						<td colspan="2"><input type="hidden" name="cPage"value="${cPage}"> 
+	<input
 							style="background-color: lightyellow" type="button" value="수정하기"
 							onclick="update_ok(this.form)"> <input
 							style="background-color: lightyellow" type="reset" value="다시">

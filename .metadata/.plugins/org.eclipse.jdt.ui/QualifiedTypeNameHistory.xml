@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.sql.Date"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="java.util.Calendar"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="com.ict.model.GetTodayCommand"/>
     <fullyQualifiedTypeName name="com.ict.model.GetLuckeyCommand"/>
     <fullyQualifiedTypeName name="com.ict.model.GetCalcCommand"/>
     <fullyQualifiedTypeName name="com.jsp.model.Ex07_Model"/>
@@ -38,13 +31,9 @@
     <fullyQualifiedTypeName name="com.guestbook2.db.DAO"/>
     <fullyQualifiedTypeName name="com.guestbook2.db.VO"/>
     <fullyQualifiedTypeName name="com.guestbook2.model.DeleteOkCommand"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.ict.model.ListCommand"/>
     <fullyQualifiedTypeName name="com.ict.model.WriteOkCommand"/>
     <fullyQualifiedTypeName name="com.ict.model.OneListCommand"/>
-    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="java.net.URLEncoder"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
@@ -52,12 +41,23 @@
     <fullyQualifiedTypeName name="java.io.BufferedOutputStream"/>
     <fullyQualifiedTypeName name="com.ict.model.UpdateCommand"/>
     <fullyQualifiedTypeName name="com.ict.model.DeleteCommand"/>
-    <fullyQualifiedTypeName name="com.ict.model.Command"/>
     <fullyQualifiedTypeName name="com.oreilly.servlet.MultipartRequest"/>
     <fullyQualifiedTypeName name="com.oreilly.servlet.multipart.FileRenamePolicy"/>
     <fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
     <fullyQualifiedTypeName name="com.ict.db.BVO"/>
     <fullyQualifiedTypeName name="com.ict.model.UpdateOkCommand"/>
-    <fullyQualifiedTypeName name="com.ict.db.DAO"/>
     <fullyQualifiedTypeName name="com.ict.model.DeleteOkCommand"/>
+    <fullyQualifiedTypeName name="com.ict.db.CVO"/>
+    <fullyQualifiedTypeName name="javax.xml.stream.events.Comment"/>
+    <fullyQualifiedTypeName name="com.ict.model.Comment_Write"/>
+    <fullyQualifiedTypeName name="com.ict.model.Comment_Delete"/>
+    <fullyQualifiedTypeName name="com.ict.page.Paging"/>
+    <fullyQualifiedTypeName name="com.ict.db.DAO"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="com.ict.model.Command"/>
 </qualifiedTypeNameHistroy>

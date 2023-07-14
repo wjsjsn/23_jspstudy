@@ -1,6 +1,8 @@
 package com.ict.db;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -19,8 +21,26 @@ public class DAO {
 
 	// DB 처리하는 메서드들
 	// 리스트
-	public static List<BVO> getList(){
-		List<BVO> list = getSession().selectList("bbs.list");
+//	public static List<BVO> getList(){
+//		List<BVO> list = getSession().selectList("bbs.list");
+//		return list;
+//	}
+	
+	// 페이지
+	//  1. 전체 게시물의 수 구하기
+	public static int getCount() {
+		int result = getSession().selectOne("bbs.count");
+		return result;
+	}
+	
+	// 원글 리스트
+	public static List<BVO> getList(int begin, int end){
+		// select문에서 파라미터가 두 개 이상이면 vo 또는 map을 사용해야함
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		map.put("begin", begin);
+		map.put("end", end);
+		
+		List<BVO> list = getSession().selectList("bbs.list", map);
 		return list;
 	}
 	
@@ -54,6 +74,33 @@ public class DAO {
 	// 원글 삭제
 	public static int getDelete(String b_idx) {
 		int result = getSession().delete("bbs.delete", b_idx);
+		ss.commit();
+		return result;
+	}
+	
+	// 댓글 가져오기
+	public static List<CVO> getCList(String b_idx){
+		List<CVO> c_list = getSession().selectList("bbs.c_list", b_idx);
+		return c_list;
+	}
+	
+	// 댓글 삽입
+	public static int getC_Insert(CVO cvo) {
+		int result = getSession().insert("bbs.c_insert", cvo);
+		ss.commit();
+		return result;
+	}
+	
+	// 댓글 삭제
+	public static int getC_Delete(String c_idx) {
+		int result = getSession().delete("bbs.c_delete", c_idx);
+		ss.commit();
+		return result;
+	}
+	
+	// 원글 관련 모든 댓글 삭제
+	public static int getCommentDeleteAll(String b_idx) {
+		int result = getSession().delete("bbs.c_all_delete", b_idx);
 		ss.commit();
 		return result;
 	}

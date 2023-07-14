@@ -23,6 +23,7 @@ public class UpdateOkCommand implements Command {
 			bvo.setContent(mr.getParameter("content"));
 
 			String old_f_name = mr.getParameter("old_f_name");
+			String cPage = mr.getParameter("cPage");
 			
 			// 첨부파일이 없으면 이전 파일로 대체
 			if(mr.getFile("f_name") == null) {
@@ -31,7 +32,7 @@ public class UpdateOkCommand implements Command {
 				bvo.setF_name(mr.getFilesystemName("f_name"));
 			}
 			int result = DAO.getUpdate(bvo);
-			return "MyController?cmd=onelist&b_idx=" + bvo.getB_idx();
+			return "MyController?cmd=onelist&b_idx=" + bvo.getB_idx() + "&cPage=" + cPage;
 		} catch (Exception e) {
 		}
 		return null;

@@ -1,6 +1,8 @@
 INDEX VERSION 1.132
 D:\pcl\jspstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3377912784.index
 \BBS\src\main\java
+D:\pcl\jspstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3586381531.index
+\SHOP\src\main\java
 D:\pcl\jspstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3555846453.index
 \02_jsp\src\main\java
 D:\pcl\jspstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2235177293.index
