@@ -9,7 +9,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.ict.model.AddCartCommand;
 import com.ict.model.Command;
+import com.ict.model.ContentCommand;
+import com.ict.model.JoinCommand;
+import com.ict.model.ListCommand;
+import com.ict.model.LogInCommand;
+import com.ict.model.LogInOkCommand;
+import com.ict.model.LogOutCommand;
+import com.ict.model.ShowCartCommand;
 
 @WebServlet("/MyController")
 public class MyController extends HttpServlet {
@@ -26,8 +34,17 @@ public class MyController extends HttpServlet {
 		
 		String cmd = request.getParameter("cmd");
 		Command comm = null;
-		if(cmd.equals("")) {
-			comm = new ;
+		switch (cmd) {
+		case "login" : comm = new LogInCommand(); break;
+		case "loginok" : comm = new LogInOkCommand(); break;
+		case "join" : comm = new JoinCommand(); break;
+		case "list" : comm = new ListCommand(); break;		
+		case "content" : comm = new ContentCommand(); break;
+		case "logout" : comm = new LogOutCommand(); break;
+		case "addcart" : comm = new AddCartCommand(); break;
+		case "showcart" : comm = new ShowCartCommand(); break;
 		}
+		String path = comm.exec(request, response);
+		request.getRequestDispatcher(path).forward(request, response);
 	}
 }
