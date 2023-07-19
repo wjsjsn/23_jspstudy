@@ -23,7 +23,7 @@ table, th, td {
 <script type="text/javascript">
 // 장바구니 담기
 	function add_cart() {
-		if(${login} == 'ok'){
+		if(${login == 'ok'}){
 			location.href="/MyController?cmd=addcart&idx=${vo.idx}";
 		}else{
 			alert("로그인 하세요.")
@@ -33,7 +33,7 @@ table, th, td {
 	
 	// 장바구니 보기
 	function show_cart() {
-	if(${login} == 'ok'){
+	if(${login == 'ok'}){
 		location.href="/MyController?cmd=showcart"	;
 			}else{
 				alert("로그인 하세요.")
@@ -68,7 +68,7 @@ table, th, td {
 		<tr>
 			<td width="40%">제품가격</td>
 			<td width="60%">시중가 : <fmt:formatNumber value="${vo.p_price}" pattern="#,##0" />원
-		<font color="red">(할인가: <fmt:formatNumber value="${vo.p_saleprice}" pattern="#,##0" />원)</font></td>	
+		<font color="tomato">(할인가: <fmt:formatNumber value="${vo.p_saleprice}" pattern="#,##0" />원)</font></td>	
 		</tr>
 		<tr>
 			<td >제품설명</td>

@@ -119,7 +119,7 @@
  	  <%-- 개선된 for문을 위해서 배열 생성 --%>
  	  <c:set var="arr_1" value="홍길동, 장길산, 임꺽정, 일지매" />
  	  <c:forEach var="k" items="${arr_1}">
- 	  		<h3>${k}님 <br></h3>
+ 	  		<h3>${k} <br></h3>
  	  </c:forEach>
  	  <hr>
  	  

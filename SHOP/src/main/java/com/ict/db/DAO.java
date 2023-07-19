@@ -66,4 +66,25 @@ public static int getCartUpdate(CartVO cvo) {
 		List<CartVO> cartlist = getSession().selectList("shop.cartalllist", m_id);
 		return cartlist;
 	}
+	
+	// 카트 업데이트
+	public static int getCartCountUpdate(CartVO cvo) {
+		int result = getSession().update("shop.cartup", cvo);
+		ss.commit();
+		return result;
+	}
+	
+	// 카트 삭제
+	public static int getCartDel(String idx) {
+		int result = getSession().delete("shop.cartdel", idx);
+		ss.commit();
+		return result;
+	}
+	
+	// 상품 추가
+	public static int getProductInsert(ShopVO vo) {
+		int result = getSession().insert("shop.productadd", vo);
+		ss.commit();
+		return result;
+	}
 }

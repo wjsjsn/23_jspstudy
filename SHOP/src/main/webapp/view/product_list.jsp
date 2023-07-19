@@ -49,7 +49,7 @@ table, th, td {
 							<td><img src="../images/${k.p_image_s}" width="100"></td>
 							<td><a href="/MyController?cmd=content&idx=${k.idx}">${k.p_name}</a></td>
 							<td>할인가 : <fmt:formatNumber value="${k.p_saleprice}" pattern="#,##0"/>원<br>
-												<font color="red">(할인율 : ${k.getPercent()}%)</font>
+												<font color="tomato">(할인율 : ${k.getPercent()}%)</font>
 							</td>
 							<td>시중 가격 : <fmt:formatNumber value="${k.p_price}" pattern="#,##0"/>원<br></td>
 						</tr>
