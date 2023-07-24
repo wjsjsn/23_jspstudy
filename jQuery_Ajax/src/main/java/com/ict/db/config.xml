@@ -16,5 +16,6 @@
 	</environments>
 	<mappers>
 		<mapper resource="com/ict/db/mapper.xml" />
+		<mapper resource="com/ict/db/mapper2.xml" />
 	</mappers>
 </configuration>

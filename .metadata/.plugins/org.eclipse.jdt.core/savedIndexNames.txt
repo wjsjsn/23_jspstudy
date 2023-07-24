@@ -57,7 +57,6 @@ INDEX VERSION 1.132+D:\pcl\jspstudy\.metadata\.plugins\org.eclipse.jdt.core
 3819707233.index
 2849574987.index
 1276496951.index
-2145949407.index
 894902678.index
 1406402081.index
 2225525613.index

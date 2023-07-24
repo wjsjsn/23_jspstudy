@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.guestbook2.model.WriteOkCommand"/>
-    <fullyQualifiedTypeName name="com.guestbook2.model.OneListCommand"/>
-    <fullyQualifiedTypeName name="com.guestbook2.model.UpdateCommand"/>
-    <fullyQualifiedTypeName name="com.guestbook2.model.DeleteCommand"/>
-    <fullyQualifiedTypeName name="com.guestbook2.model.UpdateOkCommand"/>
     <fullyQualifiedTypeName name="com.guestbook2.model.Command"/>
     <fullyQualifiedTypeName name="com.guestbook2.db.DAO"/>
     <fullyQualifiedTypeName name="com.guestbook2.db.VO"/>
@@ -45,19 +40,24 @@
     <fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="com.ict.db.ShopVO"/>
-    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
-    <fullyQualifiedTypeName name="com.ict.model.Command"/>
-    <fullyQualifiedTypeName name="com.ict.db.DAO"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
     <fullyQualifiedTypeName name="com.ict.db.VO"/>
     <fullyQualifiedTypeName name="com.ict.model.MyModel01"/>
     <fullyQualifiedTypeName name="com.ict.model.MyModel02"/>
     <fullyQualifiedTypeName name="com.ict.model.MyModel03"/>
     <fullyQualifiedTypeName name="com.ict.model.MyModel04"/>
     <fullyQualifiedTypeName name="com.ict.model.MyModel05"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="com.ict.model.MyModel08"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+    <fullyQualifiedTypeName name="com.ict.model.Command"/>
+    <fullyQualifiedTypeName name="com.ict.model.MyModel09"/>
+    <fullyQualifiedTypeName name="com.ict.model.MyModel10"/>
+    <fullyQualifiedTypeName name="com.ict.model.MyModel11"/>
+    <fullyQualifiedTypeName name="com.ict.db.DAO"/>
+    <fullyQualifiedTypeName name="com.ict.db.MVO"/>
 </qualifiedTypeNameHistroy>
