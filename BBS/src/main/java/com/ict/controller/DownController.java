@@ -17,50 +17,45 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/DownController")
 public class DownController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+    
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
 	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter out = response.getWriter();
-
+		
 		String path = request.getParameter("path");
 		String f_name = request.getParameter("f_name");
-
-		// 실제 위치
-		String realPath = getServletContext().getRealPath("/" + path);
-
-		// 웹 브라우저 문서 타입을 다운로드 할 수 있도록 변경
+		
+		// 실제위치
+		String realPath = getServletContext().getRealPath("/"+path);
+		// 웹 브라우저 문서 타입을 다운로드 할 수 있도록 변경 
 		response.setContentType("application/x-msdownload");
-
-		// 헤더 정보 변경
-		response.setHeader("Content-Disposition", "attachment; filename=" + URLEncoder.encode(f_name, "utf-8"));
-
-		// 실제 바이트 스트림 처리 후 다운로드
+		// 헤더 정보 변경 
+		response.setHeader("Content-Disposition","attachment; filename="+URLEncoder.encode(f_name,"utf-8"));
+		
+		// 실제 바이트 스트림 처리해서 다운로드 하자 
 		response.reset();
-
-		File file = new File(realPath + "/" + new String(f_name.getBytes(), "utf-8"));
+		
+		File file = new File(realPath+"/"+ new String(f_name.getBytes(),"utf-8"));
 		int b;
 		FileInputStream fis = null;
 		BufferedInputStream bis = null;
 		BufferedOutputStream bos = null;
-
 		try {
 			fis = new FileInputStream(file);
 			bis = new BufferedInputStream(fis);
+			
 			bos = new BufferedOutputStream(response.getOutputStream());
-
-			while ((b = bis.read()) != -1) {
+			while((b = bis.read()) != -1) {
 				bos.write(b);
 				bos.flush();
 			}
 		} catch (Exception e) {
-		} finally {
+			System.out.println(e);
+		}finally {
 			try {
 				bos.close();
 				bis.close();
@@ -70,3 +65,17 @@ public class DownController extends HttpServlet {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

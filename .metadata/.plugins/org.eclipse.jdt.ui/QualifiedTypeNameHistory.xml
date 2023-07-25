@@ -4,7 +4,6 @@
     <fullyQualifiedTypeName name="com.guestbook2.db.DAO"/>
     <fullyQualifiedTypeName name="com.guestbook2.db.VO"/>
     <fullyQualifiedTypeName name="com.guestbook2.model.DeleteOkCommand"/>
-    <fullyQualifiedTypeName name="com.ict.model.WriteOkCommand"/>
     <fullyQualifiedTypeName name="com.ict.model.OneListCommand"/>
     <fullyQualifiedTypeName name="java.net.URLEncoder"/>
     <fullyQualifiedTypeName name="java.io.File"/>
@@ -15,8 +14,6 @@
     <fullyQualifiedTypeName name="com.ict.model.DeleteCommand"/>
     <fullyQualifiedTypeName name="com.oreilly.servlet.multipart.FileRenamePolicy"/>
     <fullyQualifiedTypeName name="com.ict.db.BVO"/>
-    <fullyQualifiedTypeName name="com.ict.model.UpdateOkCommand"/>
-    <fullyQualifiedTypeName name="com.ict.model.DeleteOkCommand"/>
     <fullyQualifiedTypeName name="com.ict.db.CVO"/>
     <fullyQualifiedTypeName name="javax.xml.stream.events.Comment"/>
     <fullyQualifiedTypeName name="com.ict.model.Comment_Write"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="com.ict.model.MyModel11"/>
     <fullyQualifiedTypeName name="com.ict.db.DAO"/>
     <fullyQualifiedTypeName name="com.ict.db.MVO"/>
+    <fullyQualifiedTypeName name="com.ict.model.WriteOkCommand"/>
+    <fullyQualifiedTypeName name="com.ict.model.UpdateOkCommand"/>
+    <fullyQualifiedTypeName name="com.ict.model.DeleteOkCommand"/>
 </qualifiedTypeNameHistroy>

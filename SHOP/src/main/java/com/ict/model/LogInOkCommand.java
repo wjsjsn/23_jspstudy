@@ -14,8 +14,10 @@ public class LogInOkCommand implements Command {
 		
 		MemberVO mvo = new MemberVO();
 		mvo.setM_id(m_id);
+	System.out.println(m_id);
 		mvo.setM_pw(m_pw);
 		MemberVO m_vo = DAO.getLogIn(mvo);
+		System.out.println(m_id);
 		if(m_vo != null) {
 			// 관리자와 일반회원 분류
 			// 로그인 정보는 세션에 넣어서 관리

@@ -24,14 +24,12 @@ import com.ict.model.WriteOkCommand;
 @WebServlet("/MyController")
 public class MyController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+   
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter out = response.getWriter();
@@ -40,44 +38,30 @@ public class MyController extends HttpServlet {
 		Command comm = null;
 		if(cmd.equals("list")) {
 			comm = new ListCommand();
-		}else if(cmd.equals("write")) {
+		}else if(cmd.equals("write")){
 			comm = new WriteCommand();
-		}else if(cmd.equals("write_ok")) {
+		}else if(cmd.equals("write_ok")){
 			comm = new WriteOkCommand();
-		}else if(cmd.equals("onelist")) {
+		}else if(cmd.equals("onelist")){
 			comm = new OneListCommand();
-	}else if(cmd.equals("update")) {
-		comm = new UpdateCommand();
-	}else if(cmd.equals("delete")) {
-		comm = new DeleteCommand();
-	}else if(cmd.equals("update_ok")) {
-		comm = new UpdateOkCommand();
-	}else if(cmd.equals("delete_ok")) {
-		comm = new DeleteOkCommand();
-	}else if(cmd.equals("c_write")) {
-		comm = new Comment_Write();
-	}else if(cmd.equals("c_delete")) {
-		comm = new Comment_Delete();
-	}
+		}else if(cmd.equals("update")){
+			comm = new UpdateCommand();
+		}else if(cmd.equals("delete")){
+			comm = new DeleteCommand();
+		}else if(cmd.equals("upate_ok")){
+			comm = new UpdateOkCommand();
+		}else if(cmd.equals("delete_ok")) {
+			comm = new DeleteOkCommand();
+		}else if(cmd.equals("c_write")) {
+			comm = new Comment_Write();
+		}else if(cmd.equals("c_delete")) {
+			comm = new Comment_Delete();
+		}
 		String path = comm.exec(request, response);
 		request.getRequestDispatcher(path).forward(request, response);
 	}
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

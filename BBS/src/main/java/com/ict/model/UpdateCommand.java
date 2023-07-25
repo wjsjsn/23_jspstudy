@@ -6,19 +6,19 @@ import javax.servlet.http.HttpServletResponse;
 import com.ict.db.BVO;
 import com.ict.db.DAO;
 
-public class UpdateCommand implements Command {
+public class UpdateCommand implements Command{
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		String b_idx = request.getParameter("b_idx");
 		String cPage = request.getParameter("cPage");
 		BVO bvo = DAO.getOneList(b_idx);
-
-		if (bvo != null) {
+		
+		if(bvo != null) {
 			request.setAttribute("bvo", bvo);
 			request.setAttribute("cPage", cPage);
 			return "view/update.jsp";
-		} else {
-			return "MyController?cmd=onelist&b_idx=" + b_idx + "&cPage=" + cPage; 
+		}else {
+			return "MyController?cmd=onelist&b_idx="+b_idx+"&cPage="+cPage;
 		}
 	}
 }

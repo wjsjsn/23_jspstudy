@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.ict.db.CVO;
 import com.ict.db.DAO;
 
-public class Comment_Write implements Command {
+public class Comment_Write implements Command{
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		String b_idx = request.getParameter("b_idx");
@@ -20,6 +20,14 @@ public class Comment_Write implements Command {
 		cvo.setContent(content);
 		
 		int result = DAO.getC_Insert(cvo);
-		return "MyController?cmd=onelist&b_idx=" + b_idx + "&cPage=" + cPage;
+		return "MyController?cmd=onelist&b_idx="+b_idx+"&cPage="+cPage;
 	}
 }
+
+
+
+
+
+
+
+

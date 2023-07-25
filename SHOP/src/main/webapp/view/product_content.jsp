@@ -24,21 +24,20 @@ table, th, td {
 // 장바구니 담기
 	function add_cart() {
 		if(${login == 'ok'}){
-			location.href="/MyController?cmd=addcart&idx=${vo.idx}";
+			location.href="/MyController?cmd=addcart&idx=${vo.idx}"
 		}else{
-			alert("로그인 하세요.")
-			location.href="/MyController?cmd=login";
+			alert("로그인 하세요")
+			location.href="/MyController?cmd=login"
 		}
 	}
-	
 	// 장바구니 보기
 	function show_cart() {
-	if(${login == 'ok'}){
-		location.href="/MyController?cmd=showcart"	;
-			}else{
-				alert("로그인 하세요.")
-				location.href="/MyController?cmd=login";
-			}
+		if(${login == 'ok'}){
+			location.href="/MyController?cmd=showcart"
+		}else{
+			alert("로그인 하세요")
+			location.href="/MyController?cmd=login"
+		}
 	}
 </script>
 </head>

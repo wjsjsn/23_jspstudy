@@ -38,6 +38,6 @@ public class AddCartCommand implements Command {
 			// 카트에 제품이 있을 때 제품 개수를 1 증가(업데이트)
 			int result = DAO.getCartUpdate(cvo);
 		}
-		return "MyController?cmd=content&idx=" + idx;
+		return "MyController?cmd=content&idx="+idx;
 	}
 }
