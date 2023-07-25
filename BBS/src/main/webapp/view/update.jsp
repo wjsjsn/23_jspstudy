@@ -25,13 +25,13 @@
 	
 	#bbs table th {
 	    text-align:center;
-	    border:1px solid black;
+	    border:1px solid gray;
 	    padding:4px 10px;
 	}
 	
 	#bbs table td {
 	    text-align:left;
-	    border:1px solid black;
+	    border:1px solid gray;
 	    padding:4px 10px;
 	}
 	

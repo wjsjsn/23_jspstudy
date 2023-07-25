@@ -11,7 +11,7 @@
 	width:580px;
 	margin:0 auto;
 	margin-top:20px;
-	border: 1px solid black;
+	border: 1px solid gray;
 	border-collapse: collapse;
 	font-size: 14px;
 }
@@ -24,7 +24,7 @@
 
 #bbs table th, #bbs table td {
 	text-align: center;
-	border: 1px solid black;
+	border: 1px solid gray;
 	padding: 4px 10px;
 }
 
@@ -49,8 +49,8 @@ table tfoot ol.paging li {
 table tfoot ol.paging li a {
 	display: block;
 	padding: 3px 7px;
-	border: 1px solid #00B3DC;
-	color: #2f313e;
+	border: 1px solid gray;
+	color: gray;
 	font-weight: bold;
 }
 

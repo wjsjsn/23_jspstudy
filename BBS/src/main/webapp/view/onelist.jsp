@@ -11,7 +11,7 @@
 	    width:580px;
 	    margin:0 auto;
 	    margin-top:20px;
-	    border:1px solid black;
+	    border:1px solid gray;
 	    border-collapse:collapse;
 	    font-size:14px;
 	    
@@ -25,14 +25,14 @@
 	
 	#bbs table th {
 	    text-align:center;
-	    border:1px solid black;
+	    border:1px solid gray;
 	    background-color: lavender;
 	    padding:4px 10px;
 	}
 	
 	#bbs table td {
 	    text-align:left;
-	    border:1px solid black;
+	    border:1px solid gray;
 	    padding:4px 10px;
 	}
 	
@@ -76,18 +76,17 @@
 			return;
 		}
 		
-		if(f.content.value.trim().length <= 0){
-			alert("내용을 입력해주세요.");
+
+		if(f.content.value.trim().length <=0){
+			alert("내용을 입력해 주세요");
 			f.content.focus();
 			return;
 		}
-		
-		f.action="/MyController?cmd=c_write";
+		f.action = "/MyController?cmd=c_write";
 		f.submit();
 	}
-	
 	function comment_del(f) {
-		f.action="/MyController?cmd=c_delete";
+		f.action = "/MyController?cmd=c_delete";
 		f.submit();
 	}
 		
@@ -118,7 +117,7 @@
 							<td><b>첨부파일 없음</b></td>
 						</c:when>
 						<c:otherwise>
-							<td><a href="/DownController?path=upload&f_name=${bvo.f_name}" target="blank"><img src="upload/${bvo.f_name}" style="80px;"></a> </td>							
+							<td><a href="/DownController?path=upload&f_name=${bvo.f_name}" target="_blank"><img src="upload/${bvo.f_name}" style="80px;"></a> </td>							
 						</c:otherwise>
 					</c:choose>
 				</tr>
@@ -127,7 +126,7 @@
 						<input type="hidden" value="${bvo.b_idx}" name="b_idx">
 						<input type="hidden" value="${cPage}" name="cPage">
 						<input style="background-color: lightyellow" type="button" value="수정" onclick="update_go(this.form)"/>
-						<input style="background-color: lightyellow"  type="reset" value="삭제" onclick="delete_go(this.form)"/>
+						<input style="background-color: lightyellow"  type="button" value="삭제" onclick="delete_go(this.form)"/>
 						<input style="background-color: lightyellow"  type="button" value="목록" onclick="list_go(this.form)"/>
 					</td>
 				</tr>
